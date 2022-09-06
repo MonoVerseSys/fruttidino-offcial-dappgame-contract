@@ -1,0 +1,1850 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0xadC75536F3364678cBAf6f27dF99c237D6e0B8A9",
+    "txHash": "0x044eee4dd4892668693445267b7a36fd7e79e460075dfc1079aa6ead8d3a4536"
+  },
+  "proxies": [
+    {
+      "address": "0xbF9FE9ee9E00fc16d9704823671bcF57a4A69Ce2",
+      "txHash": "0x8e1fd49581e85e0f64a9b1ade33a84d47947f0f162e92e7a903b3664396c2cc9",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x8EE05C7201Ed6F3eC84316A6D7AeF20abe93DC68",
+      "txHash": "0xda6d17a4f1bc6b883adff689b0492c5fe21a74d779efe423eb4cf13612facfcb",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x14ed1869b887fE91BF840DCD75013c9f4A814766",
+      "txHash": "0xdcd19327ee5cc056f11406856777bd72e92a78fee2935f502fb7f4d30495ec89",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "0062903dda541e5cb0ffe06cfce21cea3292fdeffd397e2dfd07e7cf673c186a": {
+      "address": "0xD3698ee854bdad9dA4c166285ce3582C46562C26",
+      "txHash": "0xb522603d5ef55f3ce5c59fd700a212c6d5f6569ef572d9b6070699c65e13d6c8",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:27"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:74"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "COORDINATOR",
+            "offset": 0,
+            "slot": "150",
+            "type": "t_contract(VRFCoordinatorV2Interface)88",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:20"
+          },
+          {
+            "label": "s_subscriptionId",
+            "offset": 20,
+            "slot": "150",
+            "type": "t_uint64",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:21"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_address",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:24"
+          },
+          {
+            "label": "keyHash",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_bytes32",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:30"
+          },
+          {
+            "label": "bettingMap",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_mapping(t_uint256,t_struct(BetInfo)2127_storage)",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:43"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(VRFCoordinatorV2Interface)88": {
+            "label": "contract VRFCoordinatorV2Interface",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_uint256,t_struct(BetInfo)2127_storage)": {
+            "label": "mapping(uint256 => struct DinoArcade.BetInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(BetInfo)2127_storage": {
+            "label": "struct DinoArcade.BetInfo",
+            "members": [
+              {
+                "label": "user",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "8ef59f7005f18c2636bf0968998edfe19466e712f3a5f9dd9ae122fdf0d4e721": {
+      "address": "0xd696533b253695157946D0dFcC5A39e32beE84D3",
+      "txHash": "0xca3d3796d395633315bc0e1a6f99f29010d0cbdf64def1122b0ce4ddd95222b0",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:27"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:74"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "COORDINATOR",
+            "offset": 0,
+            "slot": "150",
+            "type": "t_contract(VRFCoordinatorV2Interface)88",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:20"
+          },
+          {
+            "label": "s_subscriptionId",
+            "offset": 20,
+            "slot": "150",
+            "type": "t_uint64",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:21"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_address",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:24"
+          },
+          {
+            "label": "keyHash",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_bytes32",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:30"
+          },
+          {
+            "label": "bettingMap",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_mapping(t_uint256,t_struct(BetInfo)2127_storage)",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:43"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(VRFCoordinatorV2Interface)88": {
+            "label": "contract VRFCoordinatorV2Interface",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_uint256,t_struct(BetInfo)2127_storage)": {
+            "label": "mapping(uint256 => struct DinoArcade.BetInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(BetInfo)2127_storage": {
+            "label": "struct DinoArcade.BetInfo",
+            "members": [
+              {
+                "label": "user",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "d3afc7c8e2d246b03346caca07bc0ebf9ddd9020d9bb14ba86eafa22fd1a6db6": {
+      "address": "0xf0C26B98C1669Ab9Ff97eE8820dee934E2a602e3",
+      "txHash": "0xaf486ece6f64356280c848c74389e6dca65b5cf769d6f4ba93419eea03fde91b",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:27"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:74"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "COORDINATOR",
+            "offset": 0,
+            "slot": "150",
+            "type": "t_contract(VRFCoordinatorV2Interface)88",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:20"
+          },
+          {
+            "label": "s_subscriptionId",
+            "offset": 20,
+            "slot": "150",
+            "type": "t_uint64",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:21"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_address",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:24"
+          },
+          {
+            "label": "keyHash",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_bytes32",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:30"
+          },
+          {
+            "label": "bettingMap",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_mapping(t_uint256,t_struct(BetInfo)2127_storage)",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:43"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(VRFCoordinatorV2Interface)88": {
+            "label": "contract VRFCoordinatorV2Interface",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_uint256,t_struct(BetInfo)2127_storage)": {
+            "label": "mapping(uint256 => struct DinoArcade.BetInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(BetInfo)2127_storage": {
+            "label": "struct DinoArcade.BetInfo",
+            "members": [
+              {
+                "label": "user",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "7677901f52deef1ced9387b6b3bc1f65054829f4a835d7c4877be9ed8b9af41d": {
+      "address": "0xA22F3F48846C3de0259B7CedFdFa1175875A29d1",
+      "txHash": "0x0ee5c3e20119d09f3e0f24f4510f2dfe443df3c38dd5b01120659a61d9756534",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:27"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:74"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "COORDINATOR",
+            "offset": 0,
+            "slot": "150",
+            "type": "t_contract(VRFCoordinatorV2Interface)88",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:20"
+          },
+          {
+            "label": "s_subscriptionId",
+            "offset": 20,
+            "slot": "150",
+            "type": "t_uint64",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:21"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_address",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:24"
+          },
+          {
+            "label": "keyHash",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_bytes32",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:30"
+          },
+          {
+            "label": "bettingMap",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_mapping(t_uint256,t_struct(BetInfo)2127_storage)",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:43"
+          },
+          {
+            "label": "random",
+            "offset": 0,
+            "slot": "154",
+            "type": "t_uint256",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:44"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(VRFCoordinatorV2Interface)88": {
+            "label": "contract VRFCoordinatorV2Interface",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_uint256,t_struct(BetInfo)2127_storage)": {
+            "label": "mapping(uint256 => struct DinoArcade.BetInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(BetInfo)2127_storage": {
+            "label": "struct DinoArcade.BetInfo",
+            "members": [
+              {
+                "label": "user",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "6d30b80211e5757301454fd6504294bb6902e83983176b88e9a68bcc20851676": {
+      "address": "0x3cc66bC582109F00938f815f240d95fc56Cf8209",
+      "txHash": "0xc3cfb9cf427f9d5b41f365e301fce8a742bf718ccc6c40ac87ec5dcae4502cec",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:27"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:74"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "COORDINATOR",
+            "offset": 0,
+            "slot": "150",
+            "type": "t_contract(VRFCoordinatorV2Interface)88",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:20"
+          },
+          {
+            "label": "s_subscriptionId",
+            "offset": 20,
+            "slot": "150",
+            "type": "t_uint64",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:21"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_address",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:24"
+          },
+          {
+            "label": "keyHash",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_bytes32",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:30"
+          },
+          {
+            "label": "bettingMap",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_mapping(t_uint256,t_struct(BetInfo)2127_storage)",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:43"
+          },
+          {
+            "label": "random",
+            "offset": 0,
+            "slot": "154",
+            "type": "t_uint256",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:44"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(VRFCoordinatorV2Interface)88": {
+            "label": "contract VRFCoordinatorV2Interface",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_uint256,t_struct(BetInfo)2127_storage)": {
+            "label": "mapping(uint256 => struct DinoArcade.BetInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(BetInfo)2127_storage": {
+            "label": "struct DinoArcade.BetInfo",
+            "members": [
+              {
+                "label": "user",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "d9938d45817ca7f587ac0c25765c7ceb977e677e448437c1347cc4cddcda765e": {
+      "address": "0x4CE391058ad486002f45f404d0C02067e3be5a6A",
+      "txHash": "0x923cc4243709976d084e0f7841ac7b43623dd280c6887f43087333ac81832f92",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:27"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:74"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "COORDINATOR",
+            "offset": 0,
+            "slot": "150",
+            "type": "t_contract(VRFCoordinatorV2Interface)88",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:20"
+          },
+          {
+            "label": "s_subscriptionId",
+            "offset": 20,
+            "slot": "150",
+            "type": "t_uint64",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:21"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_address",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:24"
+          },
+          {
+            "label": "keyHash",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_bytes32",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:30"
+          },
+          {
+            "label": "bettingMap",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_mapping(t_uint256,t_struct(BetInfo)2127_storage)",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:43"
+          },
+          {
+            "label": "random",
+            "offset": 0,
+            "slot": "154",
+            "type": "t_uint256",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:44"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(VRFCoordinatorV2Interface)88": {
+            "label": "contract VRFCoordinatorV2Interface",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_uint256,t_struct(BetInfo)2127_storage)": {
+            "label": "mapping(uint256 => struct DinoArcade.BetInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(BetInfo)2127_storage": {
+            "label": "struct DinoArcade.BetInfo",
+            "members": [
+              {
+                "label": "user",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "84d2aebb3bef7fe926d3402d5ed03759262ae76e6967680e36f4dd21062fe3ec": {
+      "address": "0x5BcF77283892e2a845a4A04928eDE5E0611201AF",
+      "txHash": "0x2d875594d797d7e9a07ec1fecb6f2e128535ba0d867054677af3134f93911e2e",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:27"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:74"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "COORDINATOR",
+            "offset": 0,
+            "slot": "150",
+            "type": "t_contract(VRFCoordinatorV2Interface)146",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:18"
+          },
+          {
+            "label": "s_subscriptionId",
+            "offset": 20,
+            "slot": "150",
+            "type": "t_uint64",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:19"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_address",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:22"
+          },
+          {
+            "label": "keyHash",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_bytes32",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:28"
+          },
+          {
+            "label": "bettingMap",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_mapping(t_uint256,t_struct(BetInfo)1067_storage)",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:41"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(VRFCoordinatorV2Interface)146": {
+            "label": "contract VRFCoordinatorV2Interface",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_uint256,t_struct(BetInfo)1067_storage)": {
+            "label": "mapping(uint256 => struct DinoArcade.BetInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(BetInfo)1067_storage": {
+            "label": "struct DinoArcade.BetInfo",
+            "members": [
+              {
+                "label": "user",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "acc1294e234422a475d8791bd88122ba6d0eddbe0731b29724d4c49e6540cb47": {
+      "address": "0x043737B8988054aC3365f23e82FAA5bE5E2ACd05",
+      "txHash": "0xa9d9e36b823cef9079929cbc6280805d5efebd9574eb5b1fad6baf9e91d84fae",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:27"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:74"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "150",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC165Upgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol:41"
+          },
+          {
+            "label": "_roles",
+            "offset": 0,
+            "slot": "200",
+            "type": "t_mapping(t_bytes32,t_struct(RoleData)123_storage)",
+            "contract": "AccessControlUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:61"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "AccessControlUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:259"
+          },
+          {
+            "label": "COORDINATOR",
+            "offset": 0,
+            "slot": "250",
+            "type": "t_contract(VRFCoordinatorV2Interface)88",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:34"
+          },
+          {
+            "label": "s_subscriptionId",
+            "offset": 20,
+            "slot": "250",
+            "type": "t_uint64",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:35"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 0,
+            "slot": "251",
+            "type": "t_address",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:38"
+          },
+          {
+            "label": "keyHash",
+            "offset": 0,
+            "slot": "252",
+            "type": "t_bytes32",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:44"
+          },
+          {
+            "label": "bettingMap",
+            "offset": 0,
+            "slot": "253",
+            "type": "t_mapping(t_uint256,t_struct(BetInfo)1355_storage)",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:48"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(VRFCoordinatorV2Interface)88": {
+            "label": "contract VRFCoordinatorV2Interface",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)123_storage)": {
+            "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(BetInfo)1355_storage)": {
+            "label": "mapping(uint256 => struct DinoArcade.BetInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(BetInfo)1355_storage": {
+            "label": "struct DinoArcade.BetInfo",
+            "members": [
+              {
+                "label": "user",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(RoleData)123_storage": {
+            "label": "struct AccessControlUpgradeable.RoleData",
+            "members": [
+              {
+                "label": "members",
+                "type": "t_mapping(t_address,t_bool)",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "e15939c9b0234d5b304c97ccbd2c8be94e8113985c67b2080780e7d3400ee286": {
+      "address": "0x62dbdf34ECc781D5F02D3D708b4CEb1f432f348D",
+      "txHash": "0x966912b8dbd85e4b7fd5cbad980a4a546fea28ca0d1b79025242af7db05ea5bb",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:27"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:74"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "150",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC165Upgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol:41"
+          },
+          {
+            "label": "_roles",
+            "offset": 0,
+            "slot": "200",
+            "type": "t_mapping(t_bytes32,t_struct(RoleData)123_storage)",
+            "contract": "AccessControlUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:61"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "AccessControlUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:259"
+          },
+          {
+            "label": "COORDINATOR",
+            "offset": 0,
+            "slot": "250",
+            "type": "t_contract(VRFCoordinatorV2Interface)88",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:34"
+          },
+          {
+            "label": "s_subscriptionId",
+            "offset": 20,
+            "slot": "250",
+            "type": "t_uint64",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:35"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 0,
+            "slot": "251",
+            "type": "t_address",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:38"
+          },
+          {
+            "label": "keyHash",
+            "offset": 0,
+            "slot": "252",
+            "type": "t_bytes32",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:44"
+          },
+          {
+            "label": "bettingMap",
+            "offset": 0,
+            "slot": "253",
+            "type": "t_mapping(t_uint256,t_struct(BetInfo)1357_storage)",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:48"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(VRFCoordinatorV2Interface)88": {
+            "label": "contract VRFCoordinatorV2Interface",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)123_storage)": {
+            "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(BetInfo)1357_storage)": {
+            "label": "mapping(uint256 => struct DinoArcade.BetInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(BetInfo)1357_storage": {
+            "label": "struct DinoArcade.BetInfo",
+            "members": [
+              {
+                "label": "user",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(RoleData)123_storage": {
+            "label": "struct AccessControlUpgradeable.RoleData",
+            "members": [
+              {
+                "label": "members",
+                "type": "t_mapping(t_address,t_bool)",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "03c1fe6dd775baa9a0840e47096c6a681fd7ada125d5d68fb52996ac31839f2f": {
+      "address": "0xDD13E66A1ec7b456892bcffCb82C864A9914140C",
+      "txHash": "0x24051d87a7a310d36c3f79ff0cd027dd1c381fb2e3b629c1269a23f1c8243a4e",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:27"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:74"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "150",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC165Upgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol:41"
+          },
+          {
+            "label": "_roles",
+            "offset": 0,
+            "slot": "200",
+            "type": "t_mapping(t_bytes32,t_struct(RoleData)123_storage)",
+            "contract": "AccessControlUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:61"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "AccessControlUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:259"
+          },
+          {
+            "label": "COORDINATOR",
+            "offset": 0,
+            "slot": "250",
+            "type": "t_contract(VRFCoordinatorV2Interface)88",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:34"
+          },
+          {
+            "label": "s_subscriptionId",
+            "offset": 20,
+            "slot": "250",
+            "type": "t_uint64",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:35"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 0,
+            "slot": "251",
+            "type": "t_address",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:38"
+          },
+          {
+            "label": "keyHash",
+            "offset": 0,
+            "slot": "252",
+            "type": "t_bytes32",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:44"
+          },
+          {
+            "label": "bettingMap",
+            "offset": 0,
+            "slot": "253",
+            "type": "t_mapping(t_uint256,t_struct(BetInfo)1357_storage)",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:48"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(VRFCoordinatorV2Interface)88": {
+            "label": "contract VRFCoordinatorV2Interface",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)123_storage)": {
+            "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(BetInfo)1357_storage)": {
+            "label": "mapping(uint256 => struct DinoArcade.BetInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(BetInfo)1357_storage": {
+            "label": "struct DinoArcade.BetInfo",
+            "members": [
+              {
+                "label": "user",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(RoleData)123_storage": {
+            "label": "struct AccessControlUpgradeable.RoleData",
+            "members": [
+              {
+                "label": "members",
+                "type": "t_mapping(t_address,t_bool)",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    }
+  }
+}
