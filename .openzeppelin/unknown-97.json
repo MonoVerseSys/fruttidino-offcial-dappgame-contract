@@ -19,6 +19,11 @@
       "address": "0x14ed1869b887fE91BF840DCD75013c9f4A814766",
       "txHash": "0xdcd19327ee5cc056f11406856777bd72e92a78fee2935f502fb7f4d30495ec89",
       "kind": "transparent"
+    },
+    {
+      "address": "0x9049E58E9914498CB97Cb1dAD593FD56e733Dc1c",
+      "txHash": "0x776b5f02f5bb6244cd14c2652df6b309096ad79f1ca9ba64e1929409f2272e14",
+      "kind": "transparent"
     }
   ],
   "impls": {
@@ -1812,6 +1817,488 @@
               }
             ],
             "numberOfBytes": "64"
+          },
+          "t_struct(RoleData)123_storage": {
+            "label": "struct AccessControlUpgradeable.RoleData",
+            "members": [
+              {
+                "label": "members",
+                "type": "t_mapping(t_address,t_bool)",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "c9506525adae580211e5c3b08cce729ef16ade5da7295005a0f3e2e0e7793036": {
+      "address": "0x3321099766Ae37948132E7c7aCeFFe6468854936",
+      "txHash": "0xb9ad181c88777ae8f10fc076b67d9765435cd34835e47eecd95d7d2c85471449",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:27"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:74"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "150",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC165Upgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol:41"
+          },
+          {
+            "label": "_roles",
+            "offset": 0,
+            "slot": "200",
+            "type": "t_mapping(t_bytes32,t_struct(RoleData)123_storage)",
+            "contract": "AccessControlUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:61"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "AccessControlUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:259"
+          },
+          {
+            "label": "DinoToken",
+            "offset": 0,
+            "slot": "250",
+            "type": "t_contract(IERC20)1356",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:40"
+          },
+          {
+            "label": "COORDINATOR",
+            "offset": 0,
+            "slot": "251",
+            "type": "t_contract(VRFCoordinatorV2Interface)88",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:41"
+          },
+          {
+            "label": "s_subscriptionId",
+            "offset": 20,
+            "slot": "251",
+            "type": "t_uint64",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:42"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 0,
+            "slot": "252",
+            "type": "t_address",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:45"
+          },
+          {
+            "label": "keyHash",
+            "offset": 0,
+            "slot": "253",
+            "type": "t_bytes32",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:46"
+          },
+          {
+            "label": "bettingMap",
+            "offset": 0,
+            "slot": "254",
+            "type": "t_mapping(t_uint256,t_struct(BetInfo)1447_storage)",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:49"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(IERC20)1356": {
+            "label": "contract IERC20",
+            "numberOfBytes": "20"
+          },
+          "t_contract(VRFCoordinatorV2Interface)88": {
+            "label": "contract VRFCoordinatorV2Interface",
+            "numberOfBytes": "20"
+          },
+          "t_enum(BetType)1439": {
+            "label": "enum DinoArcade.BetType",
+            "members": [
+              "COIN",
+              "FDT"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)123_storage)": {
+            "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(BetInfo)1447_storage)": {
+            "label": "mapping(uint256 => struct DinoArcade.BetInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(BetInfo)1447_storage": {
+            "label": "struct DinoArcade.BetInfo",
+            "members": [
+              {
+                "label": "user",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "betType",
+                "type": "t_enum(BetType)1439",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_struct(RoleData)123_storage": {
+            "label": "struct AccessControlUpgradeable.RoleData",
+            "members": [
+              {
+                "label": "members",
+                "type": "t_mapping(t_address,t_bool)",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "c4f6437114c5265d33bdf953f9878753b7d88e4c7fe0a9d34c6b4523e50da761": {
+      "address": "0x8E683D44e2FEF69e5e83840f9B454f5f71BB66A0",
+      "txHash": "0xf01504a1d2177edb42c16f1354c1977089f6fad71f05101865c88aaa3f3c91a5",
+      "layout": {
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:8"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "VRFConsumerBaseV2Upgradable",
+            "src": "contracts/VRFConsumerBaseV2Upgradable.sol:27"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "50",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:74"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "100",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "150",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC165Upgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol:41"
+          },
+          {
+            "label": "_roles",
+            "offset": 0,
+            "slot": "200",
+            "type": "t_mapping(t_bytes32,t_struct(RoleData)123_storage)",
+            "contract": "AccessControlUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:61"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "AccessControlUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:259"
+          },
+          {
+            "label": "DinoToken",
+            "offset": 0,
+            "slot": "250",
+            "type": "t_contract(IERC20)1356",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:40"
+          },
+          {
+            "label": "COORDINATOR",
+            "offset": 0,
+            "slot": "251",
+            "type": "t_contract(VRFCoordinatorV2Interface)88",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:41"
+          },
+          {
+            "label": "s_subscriptionId",
+            "offset": 20,
+            "slot": "251",
+            "type": "t_uint64",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:42"
+          },
+          {
+            "label": "vrfCoordinator",
+            "offset": 0,
+            "slot": "252",
+            "type": "t_address",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:45"
+          },
+          {
+            "label": "keyHash",
+            "offset": 0,
+            "slot": "253",
+            "type": "t_bytes32",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:46"
+          },
+          {
+            "label": "bettingMap",
+            "offset": 0,
+            "slot": "254",
+            "type": "t_mapping(t_uint256,t_struct(BetInfo)1447_storage)",
+            "contract": "DinoArcade",
+            "src": "contracts/\bDinoArcade.sol:49"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(IERC20)1356": {
+            "label": "contract IERC20",
+            "numberOfBytes": "20"
+          },
+          "t_contract(VRFCoordinatorV2Interface)88": {
+            "label": "contract VRFCoordinatorV2Interface",
+            "numberOfBytes": "20"
+          },
+          "t_enum(BetType)1439": {
+            "label": "enum DinoArcade.BetType",
+            "members": [
+              "COIN",
+              "FDT"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)123_storage)": {
+            "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(BetInfo)1447_storage)": {
+            "label": "mapping(uint256 => struct DinoArcade.BetInfo)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(BetInfo)1447_storage": {
+            "label": "struct DinoArcade.BetInfo",
+            "members": [
+              {
+                "label": "user",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "amount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "betType",
+                "type": "t_enum(BetType)1439",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
           },
           "t_struct(RoleData)123_storage": {
             "label": "struct AccessControlUpgradeable.RoleData",
