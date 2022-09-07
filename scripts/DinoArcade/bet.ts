@@ -8,7 +8,7 @@ async function main() {
         contractName: 'DinoArcade',
         deployedAddress: config.networks[utils.getNetwork()],
     })
-    let amount = ethers.utils.parseEther('0.002')
+    let amount = ethers.utils.parseEther('0.005')
     let successAmt = amount.mul(ethers.BigNumber.from('197')).div(ethers.BigNumber.from('100'))
 
     const contractBalance = await ethers.provider.getBalance(config.networks[utils.getNetwork()])

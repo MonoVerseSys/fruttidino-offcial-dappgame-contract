@@ -143,17 +143,20 @@ contract DinoArcade is Initializable, VRFConsumerBaseV2Upgradable, ReentrancyGua
 
     
 
-    function withdrawCoin(address to, uint256 amount) public onlyRole(DEFAULT_ADMIN_ROLE) {
+    function withdrawCoin(address to, uint256 amount) public onlyRole(MASTER_ROLE) {
+        require(to != address(0), "invalid address");
         require(amount <= address(this).balance, "insufficient balance");
         payable(to).sendValue(amount);
         emit Withdrawal(to, amount);
     }
 
     function addMaster(address account) public onlyRole(DEFAULT_ADMIN_ROLE) {
+        require(account != address(0), "invalid address");
         _grantRole(MASTER_ROLE, account);
     }
     
     function removeMaster(address account) public onlyRole(DEFAULT_ADMIN_ROLE) {
+        require(account != address(0), "invalid address");
         _revokeRole(MASTER_ROLE, account);
     }
 

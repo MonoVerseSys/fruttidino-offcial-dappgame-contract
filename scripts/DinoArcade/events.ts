@@ -12,7 +12,7 @@ async function main() {
     const filter = c.filters.BetResult()
     // console.log(filter)
 
-    const events = await c.queryFilter(filter, -100, 'latest')
+    const events = await c.queryFilter(filter, -1000, 'latest')
     // console.log(events)
     for (const event of events) {
         console.log(event.args)
