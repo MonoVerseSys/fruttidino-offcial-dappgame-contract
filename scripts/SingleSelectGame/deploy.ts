@@ -3,7 +3,7 @@ import * as utils from '../utils'
 async function main() {
     const signers = await utils.singers()
     await utils.deployProxy({
-        contractName: 'DinoArcade',
+        contractName: 'SingleSelectGame',
         deployParams: [signers[0].address, '1772'],
     })
 }

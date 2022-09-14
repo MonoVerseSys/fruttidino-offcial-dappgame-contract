@@ -8,7 +8,7 @@ async function main() {
 
     const gameContractAddress = config.networks[utils.getNetwork()]
     const c = await utils.attach({
-        contractName: 'DinoArcade',
+        contractName: 'SingleSelectGame',
         deployedAddress: gameContractAddress,
     })
 
@@ -40,8 +40,8 @@ async function main() {
         const tx = await receipt.wait()
         console.log('allowance tx:', tx)
     }
-
-    const receipt = await c.betFdt(betAmount)
+    // 1 ~ 2
+    const receipt = await c.betFdt(betAmount, [1])
     console.log('bet receipt: ', receipt)
     const tx = await receipt.wait()
     console.log('bet tx:', tx)

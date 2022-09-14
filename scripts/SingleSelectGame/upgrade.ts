@@ -6,7 +6,7 @@ const config: Config = configJson
 
 async function main() {
     await utils.upgradeProxy({
-        contractName: 'DinoArcade',
+        contractName: 'SingleSelectGame',
         deployedAddress: config.networks[utils.getNetwork()],
     })
 }

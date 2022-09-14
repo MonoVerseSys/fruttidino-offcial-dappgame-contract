@@ -5,7 +5,7 @@ import configJson from './_config.json'
 const config: Config = configJson
 async function main() {
     const c = await utils.attach({
-        contractName: 'DinoArcade',
+        contractName: 'SingleSelectGame',
         deployedAddress: config.networks[utils.getNetwork()],
     })
     const signers = await utils.singers()
@@ -15,7 +15,7 @@ async function main() {
     const events = await c.queryFilter(filter, -1000, 'latest')
     console.log(events)
 
-    const betInfo = await c.getBetInfo('97665108619971693246135751978017107164006871042401342126403791944783020530062')
+    const betInfo = await c.getBetInfo('0x40fde8fc59ecb4c626bf0c26e1a972c9721dd889fb290782737847388e286d2e')
     console.log(betInfo)
 }
 

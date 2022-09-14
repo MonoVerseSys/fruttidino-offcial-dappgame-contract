@@ -5,18 +5,19 @@ import configJson from './_config.json'
 const config: Config = configJson
 async function main() {
     const c = await utils.attach({
-        contractName: 'DinoArcade',
+        contractName: 'SingleSelectGame',
         deployedAddress: config.networks[utils.getNetwork()],
     })
     let amount = ethers.utils.parseEther('0.005')
-    let successAmt = amount.mul(ethers.BigNumber.from('197')).div(ethers.BigNumber.from('100'))
+    let successAmt = amount.mul(ethers.BigNumber.from('192')).div(ethers.BigNumber.from('100'))
 
     const contractBalance = await ethers.provider.getBalance(config.networks[utils.getNetwork()])
     console.log(`contractBalance: ${ethers.utils.formatEther(contractBalance)}`)
     console.log(`successAmt: ${ethers.utils.formatEther(successAmt)}`)
 
     if (contractBalance.gte(successAmt)) {
-        const receipt = await c.betCoin({ value: amount })
+        // 1~8범위의 숫자를 배열로 8개 까지 입력가능.
+        const receipt = await c.betCoin([1], { value: amount })
         console.log(receipt)
         const tx = await receipt.wait()
         console.log(JSON.stringify(tx, null, 2))

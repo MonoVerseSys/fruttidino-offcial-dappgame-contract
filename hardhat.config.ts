@@ -30,7 +30,7 @@ task('accounts2', 'Prints the list of accounts', async (taskArgs, hre) => {
 task('transfer', 'transfer coin', async (taskArgs, hre) => {
     const accounts = await hre.ethers.getSigners()
 
-    const receipt = await accounts[0].sendTransaction({ to: '0xa9a2CFad59ef30aB31565AfB041b7674dEb958c2', value: hre.ethers.utils.parseEther('1') })
+    const receipt = await accounts[0].sendTransaction({ to: '0x972E12BfAA54886DfD5C2791f2E551235C92375f', value: hre.ethers.utils.parseEther('0.5') })
     console.log(receipt)
     const tx = await receipt.wait()
     console.log(tx)

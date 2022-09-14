@@ -5,7 +5,7 @@ import configJson from './_config.json'
 const config: Config = configJson
 async function main() {
     const c = await utils.attach({
-        contractName: 'DinoArcade',
+        contractName: 'SingleSelectGame',
         deployedAddress: config.networks[utils.getNetwork()],
     })
     const signers = await utils.singers()
