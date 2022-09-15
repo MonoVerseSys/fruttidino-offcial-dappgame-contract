@@ -1,9 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.9;
 
-import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol";
 
 import "./DinoArcade.sol";
 
@@ -19,26 +16,35 @@ contract SingleSelectGame is Initializable, DinoArcade {
     function betCoin(uint256[] memory selected) payable public override nonReentrant() {
         require(selected.length == 1, "Input value is not valid");
         require(msg.value >= LIMIT_BET_COIN, "Insufficient minimum betting amount");
-        _randomRequest(BetInfo(_msgSender(), msg.value, BetType.COIN, selected));
+        _randomRequest(BetInfo(_msgSender(), msg.value, BetType.COIN, selected, 0));
     }
 
-    function betFdt(uint256 amount, uint256[] memory selected) public override nonReentrant() {
+    function _betFdt(address sender, uint256 amount, uint256[] memory selected) internal {
         require(selected.length == 1, "Input value is not valid");
-        require(_getDinoToken().allowance(_msgSender(), address(this)) >= amount, "Insufficient allowance");
         require(amount >= LIMIT_BET_FDT, "Insufficient minimum betting amount");
-
-        bool result = _getDinoToken().transferFrom(_msgSender(), address(this), amount);
-        require(result, "Token transfer failed");
-        _randomRequest(BetInfo(_msgSender(), amount, BetType.FDT, selected));
+        _randomRequest(BetInfo(sender, amount, BetType.FDT, selected, 0));
     }
+
+
+    function onTransferReceived(address operator, address from, uint256 value, bytes memory data) external override nonReentrant() returns (bytes4) {
+        require(operator == dinoTokenAddress, "");
+        (uint256[] memory selected) = abi.decode(data, (uint256[]));
+        _betFdt(from, value, selected);
+        return this.onTransferReceived.selector;
+    }
+
+    function onApprovalReceived(address sender, uint256 amount, bytes memory data) external override nonReentrant() returns (bytes4) {
+        return this.onApprovalReceived.selector;
+    }
+
     function fulfillRandomWords(
         uint256 requestId,
         uint256[] memory randomWords
     ) internal override {
-        BetInfo memory betInfo = getBetInfo(requestId);
-
+        BetInfo storage betInfo = bettingMap[requestId];
         uint256 ran = randomWords[0];
         ran = (ran % 2) + 1; // 1 ~ 2
+        betInfo.randomNumber = ran;
 
         if(betInfo.selected[0] == ran) { // win
             uint256 winAmount = betInfo.amount * _successRate / 1000;

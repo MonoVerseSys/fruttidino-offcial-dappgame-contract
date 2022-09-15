@@ -18,7 +18,7 @@ async function main() {
 
     const signers = await utils.singers()
     const fdt = await ethers.getContractAt('IERC20', erc20Address, signers[0])
-    const receipt = await fdt.transfer('0xa9a2CFad59ef30aB31565AfB041b7674dEb958c2', ethers.utils.parseEther('10000'))
+    const receipt = await fdt.transfer('0xB33a83B50A17F2e9a9f23af65a91aC2013875771', ethers.utils.parseEther('10000'))
     console.log(receipt)
     const tx = await receipt.wait()
     console.log(tx)
