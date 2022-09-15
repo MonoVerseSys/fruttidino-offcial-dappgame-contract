@@ -5,6 +5,7 @@ import configJson from './_config.json'
 const config: Config = configJson
 async function main() {
     // const amount = ethers.utils.parseEther('0.01')
+    const successRate = ['7680', '3840', '2560', '1920', '1540', '1280', '1100', '960']
 
     const gameContractAddress = config.networks[utils.getNetwork()]
 
@@ -17,8 +18,21 @@ async function main() {
     }
 
     const signers = await utils.singers()
+
     const fdt = await ethers.getContractAt('FdtToken', erc20Address, signers[0])
+
     let betAmount = ethers.utils.parseEther('1')
+    const gameFdtBalance = await fdt.balanceOf(gameContractAddress)
+    const selected = [1, 2, 3, 4, 5, 6, 7]
+
+    const rate = ethers.BigNumber.from(successRate[selected.length - 1])
+    const successAmt = rate.mul(betAmount).div(ethers.BigNumber.from('1000'))
+
+    if (gameFdtBalance.lt(successAmt)) {
+        console.error('잔액부족')
+        return
+    }
+
     const data = ethers.utils.defaultAbiCoder.encode(['uint256[]'], [[1, 2, 3, 4, 5, 6, 7]])
     console.log(data)
     const receipt = await fdt['transferAndCall(address,uint256,bytes)'](gameContractAddress, betAmount, data)
