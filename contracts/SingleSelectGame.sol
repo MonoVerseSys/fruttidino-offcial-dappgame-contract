@@ -27,9 +27,10 @@ contract SingleSelectGame is Initializable, DinoArcade {
 
 
     function onTransferReceived(address operator, address from, uint256 value, bytes memory data) external override nonReentrant() returns (bytes4) {
-        require(operator == dinoTokenAddress, "");
-        (uint256[] memory selected) = abi.decode(data, (uint256[]));
-        _betFdt(from, value, selected);
+        if(data.length > 0 && _msgSender() == dinoTokenAddress) {
+            (uint256[] memory selected) = abi.decode(data, (uint256[]));
+            _betFdt(from, value, selected);
+        }
         return this.onTransferReceived.selector;
     }
 

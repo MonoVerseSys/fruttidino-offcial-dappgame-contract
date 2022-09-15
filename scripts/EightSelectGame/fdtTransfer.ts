@@ -11,7 +11,7 @@ async function main() {
 
     let erc20Address = ''
     if (network === 'bsctest') {
-        erc20Address = '0x474A423Fe3b530894c4dCe0ce61Ea38Ab0E157c7'
+        erc20Address = '0x4E44CF15A450c402E3a532f78182c919D7fE908C'
     } else if (network === 'bsc') {
         erc20Address = '0x3a599e584075065eAAAc768D75EaEf85c2f2fF64'
     }

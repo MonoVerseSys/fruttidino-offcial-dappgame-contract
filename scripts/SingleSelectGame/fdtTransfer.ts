@@ -11,14 +11,14 @@ async function main() {
 
     let erc20Address = ''
     if (network === 'bsctest') {
-        erc20Address = '0x474A423Fe3b530894c4dCe0ce61Ea38Ab0E157c7'
+        erc20Address = '0x4E44CF15A450c402E3a532f78182c919D7fE908C'
     } else if (network === 'bsc') {
         erc20Address = '0x3a599e584075065eAAAc768D75EaEf85c2f2fF64'
     }
 
     const signers = await utils.singers()
     const fdt = await ethers.getContractAt('IERC20', erc20Address, signers[0])
-    const receipt = await fdt.transfer('0x972E12BfAA54886DfD5C2791f2E551235C92375f', ethers.utils.parseEther('10000'))
+    const receipt = await fdt.transfer('0x671cF5Eb5c3Eb9ca0E6dE90DB60DcfA71224D7F1', ethers.utils.parseEther('10000'))
     console.log(receipt)
     const tx = await receipt.wait()
     console.log(tx)
