@@ -8,13 +8,15 @@ import "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-import "@chainlink/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol";
+// import "@chainlink/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol";
 
-import "./VRFConsumerBaseV2Upgradable.sol";
+// import "./VRFConsumerBaseV2Upgradable.sol";
 import "./interface/IERC1363Receiver.sol";
 import "./interface/IERC1363Spender.sol";
+import "./monoverse/AbVRFMonoverseConsumer.sol";
 
-abstract contract DinoArcade is Initializable, VRFConsumerBaseV2Upgradable, ReentrancyGuardUpgradeable, AccessControlUpgradeable, ERC1363Receiver, ERC1363Spender {
+
+abstract contract DinoArcade is Initializable, AbVRFMonoverseConsumer, ReentrancyGuardUpgradeable, AccessControlUpgradeable, ERC1363Receiver, ERC1363Spender {
     using AddressUpgradeable for address payable;
     
     event RequestBet(address indexed user, uint256 indexed requestId, uint256 amount, uint256 betType);
@@ -42,7 +44,7 @@ abstract contract DinoArcade is Initializable, VRFConsumerBaseV2Upgradable, Reen
     }
 
     IERC20 private _DinoToken;
-    VRFCoordinatorV2Interface private COORDINATOR;
+    // VRFCoordinatorV2Interface private COORDINATOR;
     uint64 private s_subscriptionId;
     
     // see https://docs.chain.link/docs/vrf-contracts/#configurations
@@ -72,21 +74,24 @@ abstract contract DinoArcade is Initializable, VRFConsumerBaseV2Upgradable, Reen
         require(id == BSC_MAINNET || id == BSC_TESTNET, "Unsupported Network");
         if(id == BSC_MAINNET) {
             dinoTokenAddress = 0x3a599e584075065eAAAc768D75EaEf85c2f2fF64;
-            COORDINATOR = VRFCoordinatorV2Interface(0xc587d9053cd1118f25F645F9E08BB98c9712A4EE);
+            // COORDINATOR = VRFCoordinatorV2Interface(0xc587d9053cd1118f25F645F9E08BB98c9712A4EE);
             keyHash = 0x114f3da0a805b6a67d6e9cd2ec746f7028f1b7376365af575cfea3550dd1aa04;
-            __VRFConsumerBaseV2_init(0xc587d9053cd1118f25F645F9E08BB98c9712A4EE);
+            // __VRFConsumerBaseV2_init(0xc587d9053cd1118f25F645F9E08BB98c9712A4EE);
+            setVRFCoordinatorAddr(0xc587d9053cd1118f25F645F9E08BB98c9712A4EE);
             _DinoToken = IERC20(dinoTokenAddress);
 
         } else if(id == BSC_TESTNET) {
             dinoTokenAddress = 0x4E44CF15A450c402E3a532f78182c919D7fE908C;
-            COORDINATOR = VRFCoordinatorV2Interface(0x6A2AAd07396B36Fe02a22b33cf443582f682c82f);
+            // COORDINATOR = VRFCoordinatorV2Interface(0x6A2AAd07396B36Fe02a22b33cf443582f682c82f);
             keyHash = 0xd4bb89654db74673a187bd804519e65e3f71a52bc55f11da7601a13dcf505314;
-            __VRFConsumerBaseV2_init(0x6A2AAd07396B36Fe02a22b33cf443582f682c82f);
+            // __VRFConsumerBaseV2_init(0x6A2AAd07396B36Fe02a22b33cf443582f682c82f);
+            setVRFCoordinatorAddr(0x1683014854153BBBeEF8a899e5D0298A61558008);
             _DinoToken = IERC20(dinoTokenAddress);
 
         }
 
         __AccessControl_init();
+        __ReentrancyGuard_init();
         s_subscriptionId = subscriptionId;
         _grantRole(DEFAULT_ADMIN_ROLE, deployer);
         _grantRole(MASTER_ROLE, deployer);
@@ -106,14 +111,14 @@ abstract contract DinoArcade is Initializable, VRFConsumerBaseV2Upgradable, Reen
     }
 
     function _randomRequest(BetInfo memory betInfo) internal {
-
-        uint256 requestId = COORDINATOR.requestRandomWords(
-            keyHash,
-            s_subscriptionId,
-            requestConfirmations,
-            callbackGasLimit,
-            1
-            );
+        uint256 requestId = requestRandomness(1);
+        // uint256 requestId = COORDINATOR.requestRandomWords(
+        //     keyHash,
+        //     s_subscriptionId,
+        //     requestConfirmations,
+        //     callbackGasLimit,
+        //     1
+        //     );
         bettingMap[requestId] = BetInfo(betInfo.user, betInfo.amount, betInfo.betType, betInfo.selected, betInfo.randomNumber);
         emit RequestBet(betInfo.user, requestId, betInfo.amount, uint256(betInfo.betType));
     }

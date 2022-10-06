@@ -38,7 +38,7 @@ contract SingleSelectGame is Initializable, DinoArcade {
         return this.onApprovalReceived.selector;
     }
 
-    function fulfillRandomWords(
+    function fulfillRandomness(
         uint256 requestId,
         uint256[] memory randomWords
     ) internal override {

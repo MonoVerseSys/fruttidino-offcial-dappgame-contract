@@ -23,7 +23,7 @@ async function main() {
 
     let betAmount = ethers.utils.parseEther('1')
     const gameFdtBalance = await fdt.balanceOf(gameContractAddress)
-    const selected = [1, 2, 3, 4, 5, 6, 7]
+    const selected = [1, 3, 5, 7]
 
     const rate = ethers.BigNumber.from(successRate[selected.length - 1])
     const successAmt = rate.mul(betAmount).div(ethers.BigNumber.from('1000'))
@@ -33,7 +33,7 @@ async function main() {
         return
     }
 
-    const data = ethers.utils.defaultAbiCoder.encode(['uint256[]'], [[1, 2, 3, 4, 5, 6, 7]])
+    const data = ethers.utils.defaultAbiCoder.encode(['uint256[]'], [selected])
     console.log(data)
     const receipt = await fdt['transferAndCall(address,uint256,bytes)'](gameContractAddress, betAmount, data)
     console.log(receipt)

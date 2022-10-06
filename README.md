@@ -57,7 +57,7 @@ Chainlink(ORACLE)의 VRF를 이용한 공정한 DAPP
  - BNB
  - FDT
    - https://bscscan.com/token/0x3a599e584075065eaaac768d75eaef85c2f2ff64
-   - EIP1363을 구현함으로서 배팅 시 Approve 과점이 생략된다. (Token의 transferAndCall을 통해 배팅)
+   - EIP1363을 구현함으로서 배팅 시 Approve 과정이 생략된다. (Token의 transferAndCall을 통해 배팅)
 
 
 ## deployed address

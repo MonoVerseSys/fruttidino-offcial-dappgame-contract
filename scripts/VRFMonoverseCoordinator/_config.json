@@ -1,0 +1,6 @@
+{
+  "contractName": "VRFMonoverseCoordinator",
+  "networks": {
+    "bsctest": "0x1683014854153BBBeEF8a899e5D0298A61558008"
+  }
+}

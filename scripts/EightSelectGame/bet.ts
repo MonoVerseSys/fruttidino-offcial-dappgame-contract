@@ -17,7 +17,7 @@ async function main() {
 
     if (contractBalance.gte(successAmt)) {
         // 1~8범위의 숫자를 배열로 8개 까지 입력가능.
-        const receipt = await c.betCoin([1, 2, 3, 4, 5, 6, 7], { value: amount })
+        const receipt = await c.betCoin([2, 4, 6, 8], { value: amount })
         console.log(receipt)
         const tx = await receipt.wait()
         console.log(JSON.stringify(tx, null, 2))
