@@ -5,7 +5,7 @@ import configJson from './_config.json'
 const config: Config = configJson
 async function main() {
     const c = await utils.attach({
-        contractName: 'EightSelectGame',
+        contractName: config.contractName,
         deployedAddress: config.networks[utils.getNetwork()],
     })
     let amount = ethers.utils.parseEther('0.005')
@@ -17,10 +17,17 @@ async function main() {
 
     if (contractBalance.gte(successAmt)) {
         // 1~8범위의 숫자를 배열로 8개 까지 입력가능.
-        const receipt = await c.betCoin([2, 4], { value: amount })
+        const receipt = await c.betCoin([1, 2, 3, 4, 5], '0x7f0be27b1b1f25eb3b1cb7a6d00a444a4f501a7e7f0ed8b8f8f3e2a8425be58c', { value: amount })
         console.log(receipt)
         const tx = await receipt.wait()
         console.log(JSON.stringify(tx, null, 2))
+
+        // const iface = new ethers.utils.Interface(['event Request(uint256 requestId,bytes32 seedHash)'])
+        // const decodeEvent = iface.parseLog({ data: tx.events[0].data, topics: tx.events[0].topics })
+        // console.log('decodeEvent: ', decodeEvent)
+
+        // console.log(`req id : `, decodeEvent.args.requestId.toHexString())
+        // console.log(`seed hash : `, decodeEvent.args.seedHash)
     } else {
         console.error('계약 잔액부족')
     }

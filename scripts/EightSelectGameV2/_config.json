@@ -1,0 +1,6 @@
+{
+  "contractName": "EightSelectGameV2",
+  "networks": {
+    "bsctest": "0xd04ec6e054342dD0ff74683e938Ed30361B63f1d"
+  }
+}

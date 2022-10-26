@@ -1,0 +1,6 @@
+{
+  "contractName": "SingleSelectGameV2",
+  "networks": {
+    "bsctest": "0xDd822e399FC491aF55EDa141812C85e518b4C16A"
+  }
+}

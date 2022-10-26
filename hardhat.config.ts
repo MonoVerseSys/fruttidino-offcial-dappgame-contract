@@ -1,6 +1,7 @@
 import { HardhatUserConfig, task } from 'hardhat/config'
 import '@nomicfoundation/hardhat-toolbox'
 import '@openzeppelin/hardhat-upgrades'
+import 'hardhat-gas-reporter'
 
 import dotenv from 'dotenv'
 
@@ -30,15 +31,25 @@ task('accounts2', 'Prints the list of accounts', async (taskArgs, hre) => {
 
 task('transfer', 'transfer coin', async (taskArgs, hre) => {
     const accounts = await hre.ethers.getSigners()
-
-    const receipt = await accounts[0].sendTransaction({ to: '0x1e4290695fe19dFB78BdCA962d7aDcc8A0Fb7292', value: hre.ethers.utils.parseEther('0.5') })
+    const receipt = await accounts[0].sendTransaction({
+        to: '0xd04ec6e054342dD0ff74683e938Ed30361B63f1d',
+        value: hre.ethers.utils.parseEther('0.4'),
+    })
     console.log(receipt)
     const tx = await receipt.wait()
     console.log(tx)
 })
 
 const config: HardhatUserConfig = {
-    solidity: '0.8.9',
+    solidity: {
+        version: '0.8.9',
+        settings: {
+            optimizer: {
+                enabled: true,
+                runs: 200,
+            },
+        },
+    },
     networks: {
         local: {
             url: 'http://127.0.0.1:8545/',
