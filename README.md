@@ -66,3 +66,9 @@ Chainlink(ORACLE)의 VRF를 이용한 공정한 DAPP
   
 
 - bsc mainent : 0x0
+
+
+## verify
+
+
+npx hardhat verify --contract  contracts/chainlink-event/MonoverseEvent001.sol:MonoverseEvent001 0xf6F753dA16057A768358AE7470561205d37C4615  --network bsc

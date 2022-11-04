@@ -7,7 +7,7 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-const { mnemonic, mnemonicReal, mnemonicDeadCat } = process.env
+const { mnemonic, mnemonicReal, mnemonicDeadCat, prodMnemonic, scanKey } = process.env
 
 task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
     const accounts = await hre.ethers.getSigners()
@@ -31,9 +31,9 @@ task('accounts2', 'Prints the list of accounts', async (taskArgs, hre) => {
 
 task('transfer', 'transfer coin', async (taskArgs, hre) => {
     const accounts = await hre.ethers.getSigners()
-    const receipt = await accounts[0].sendTransaction({
-        to: '0xd04ec6e054342dD0ff74683e938Ed30361B63f1d',
-        value: hre.ethers.utils.parseEther('0.4'),
+    const receipt = await accounts[1].sendTransaction({
+        to: accounts[0].address,
+        value: hre.ethers.utils.parseEther('0.5'),
     })
     console.log(receipt)
     const tx = await receipt.wait()
@@ -63,7 +63,7 @@ const config: HardhatUserConfig = {
         },
         bsc: {
             url: `https://bsc-dataseed.binance.org/`,
-            accounts: { mnemonic: mnemonicReal },
+            accounts: { mnemonic: prodMnemonic },
             gas: 2100000,
             // gasPrice: 5000000000,
         },
@@ -74,6 +74,9 @@ const config: HardhatUserConfig = {
             gas: 'auto',
             gasPrice: 'auto',
         },
+    },
+    etherscan: {
+        apiKey: scanKey,
     },
 }
 

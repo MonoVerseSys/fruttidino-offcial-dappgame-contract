@@ -1,0 +1,7 @@
+{
+  "contractName": "MonoverseEvent001",
+  "networks": {
+    "bsctest": "0x4B9d78416E17F21eD8A300d9bFB679988055a601",
+    "bsc": "0x1081Ad25965D87868B4FEe18570CcACE8D1CfB07"
+  }
+}
