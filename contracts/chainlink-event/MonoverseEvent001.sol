@@ -1,3 +1,4 @@
+
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.9;
 import '@chainlink/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol';
@@ -40,12 +41,17 @@ contract MonoverseEvent001 is VRFConsumerBaseV2, Ownable {
         s_subscriptionId = subscriptionId;
     }
 
+    function remove(uint256 index) internal {
+        eventUsers[index] = eventUsers[eventUsers.length - 1];
+        eventUsers.pop();
+    }
 
     function fulfillRandomWords(uint256 requestId, uint256[] memory randomWords) internal override {
         for(uint z=0; z < randomWords.length; z++) {
             uint256 ran = randomWords[z] % eventUsers.length;
             winners.push(WinnerInfo(eventUsers[ran], ran));
             emit Winner(eventUsers[ran], ran);
+            remove(ran);
         }
         
     }
